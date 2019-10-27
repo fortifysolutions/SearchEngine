@@ -1,0 +1,83 @@
+import webbrowser
+import time
+
+
+print('\n---------------------------------------')
+print('\033[1;31mFORTIFY \033[0mSOLUTIONS')
+print(time.asctime())
+print('\033[1;31m【W】【e】【b】【P】【a】【g】【e】\n')
+print('*'*54)
+print('\033[1;32mSURFACE WEB SEARCH ENGINE <--> DARK WEB SEARCH ENGINE\033[0m')
+print('\033[31m.'*54)
+print('[a] --> GOOGLE\t\t\t\t[o] --> TOR BROWSER')
+print('[b] --> BING\t\t\t\t[p] --> GETI2P')
+print('[c] --> DUCKDUCKGO\t\t\t[q] --> SUBGRAPH')
+print('[d] --> WIKI\t\t\t\t[r] --> MOZILLA')
+print('[e] --> CC SEARCH\t\t\t[s] --> WATERFOX')
+print('[f] --> GIBIRU\t\t\t\t[t] --> TAIL BOUM')
+print('[g] --> ARCHIVE\t\t\t\t[u] --> OPERA')
+print('[h] --> SEARCH ENCRYPT\t\t[v] --> WHONIX')
+print('[i] --> YANDEX\t\t')
+print('[j] --> START PAGE\t\t')
+print('[k] --> SWISS COWS\t\t')
+print('[l] --> ECOSIA\t\t')
+print('[m] --> GIGABLAST\t\t')
+print('[n] --> BAIDU\t\t')
+
+
+
+def test():
+    while True:
+        option = input('\033[1;34mEnter option > ').lower()
+        if option =='a':
+            webbrowser.open_new_tab('http://www.google.com')
+        elif option == 'b':
+            webbrowser.open_new_tab('http://www.bing.com')
+        elif option == 'c':
+            webbrowser.open_new_tab('http://www.duckduckgo.com')
+        elif option == 'd':
+            webbrowser.open_new_tab('http://www.wiki.com')
+        elif option == 'e':
+            webbrowser.open_new_tab('https://ccsearch.creativecommons.org/')
+        elif option == 'f':
+            webbrowser.open_new_tab('https://gibiru.com/')
+        elif option == 'g':
+            webbrowser.open_new_tab('https://archive.org/') #internet Archive
+        elif option == 'h':
+            webbrowser.open_new_tab('https://www.searchencrypt.com/')
+        elif option == 'i':
+            webbrowser.open_new_tab('https://yandex.com/')
+        elif option == 'j':
+            webbrowser.open_new_tab('https://www.startpage.com/')
+        elif option == 'k':
+            webbrowser.open_new_tab('https://swisscows.ch/')
+        elif option == 'l':
+            webbrowser.open_new_tab('https://www.ecosia.org/?c=en')
+        elif option == 'm':
+            webbrowser.open_new_tab('https://www.gigablast.com/')
+        elif option == 'n':
+            webbrowser.open_new_tab('https://www.baidu.com/')
+        elif option == 'o':
+            webbrowser.open_new_tab('https://www.torproject.org/download/')
+        elif option == 'p':
+            webbrowser.open_new_tab('https://geti2p.net/en/')
+        elif option == 'q':
+            webbrowser.open_new_tab('https://subgraph.com/sgos/')
+        elif option == 'r':
+            webbrowser.open_new_tab('https://www.mozilla.org/en-US/firefox/new/')
+        elif option == 's':
+            webbrowser.open_new_tab('https://www.waterfox.net/')
+        elif option == 't':
+            webbrowser.open_new_tab('https://tails.boum.org/')
+        elif option == 'u':
+            webbrowser.open_new_tab('https://www.opera.com/hi')
+        elif option == 'v':
+            webbrowser.open_new_tab('https://www.whonix.org/')
+        again = input('\033[1;36mEnter [1] to QUIT or ENTER any key to CONTINUE.....')
+        time.sleep(1)
+        if again == '1':
+            print('\nFORTIFY SOLUTIONS Thanks to all members for its Support and Contributions')
+            time.sleep(2)
+            break
+
+test()
