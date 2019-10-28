@@ -165,6 +165,16 @@ def opendarkwebpage(option):
             break
 
 
+def body():
+    print('.'*40)
+    print('\033[1;31m [1] >>>  SURFACE WEB SEARCH ENGINE\n [2] >>>  DARK WEB SEARCH ENGINE\033[0m\033[32m\n')
+    search_engine_selection = selection()
+    if search_engine_selection == 1:
+        openwebpage = surface_web_options()
+        opensurfacewebpage(openwebpage)
+    elif search_engine_selection == 2:
+        openwebpage = dark_web_options()
+        opendarkwebpage(openwebpage)
 
 def main():
     print('\n')
@@ -176,14 +186,11 @@ def main():
     print('\n\033[1;31m【W】【e】【b】【P】【a】【g】【e】\033[0m\n')
     print('-'*40)
     print('\033[34mSELECT\t\tOPTIONS\033[0m')
-    print('.'*40)
-    print('\033[1;31m [1] >>>  SURFACE WEB SEARCH ENGINE\n [2] >>>  DARK WEB SEARCH ENGINE\033[0m\033[32m\n')
-    search_engine_selection = selection()
-    if search_engine_selection == 1:
-        openwebpage = surface_web_options()
-        opensurfacewebpage(openwebpage)
-    elif search_engine_selection == 2:
-        openwebpage = dark_web_options()
-        opendarkwebpage(openwebpage)
+    while True:
+        body()
+        c = input('\033[1;31mTo EXIT enter 1 or entry any KEY to CONTINUE...')
+        if c == '1':
+            time.sleep(1)
+            break
 
 main()
