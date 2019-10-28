@@ -1,83 +1,189 @@
 import webbrowser
 import time
 
-
-print('\n---------------------------------------')
-print('\033[1;31mFORTIFY \033[0mSOLUTIONS')
-print(time.asctime())
-print('\033[1;31m【W】【e】【b】【P】【a】【g】【e】\n')
-print('*'*54)
-print('\033[1;32mSURFACE WEB SEARCH ENGINE <--> DARK WEB SEARCH ENGINE\033[0m')
-print('\033[31m.'*54)
-print('[a] --> GOOGLE\t\t\t\t[o] --> TOR BROWSER')
-print('[b] --> BING\t\t\t\t[p] --> GETI2P')
-print('[c] --> DUCKDUCKGO\t\t\t[q] --> SUBGRAPH')
-print('[d] --> WIKI\t\t\t\t[r] --> MOZILLA')
-print('[e] --> CC SEARCH\t\t\t[s] --> WATERFOX')
-print('[f] --> GIBIRU\t\t\t\t[t] --> TAIL BOUM')
-print('[g] --> ARCHIVE\t\t\t\t[u] --> OPERA')
-print('[h] --> SEARCH ENCRYPT\t\t[v] --> WHONIX')
-print('[i] --> YANDEX\t\t')
-print('[j] --> START PAGE\t\t')
-print('[k] --> SWISS COWS\t\t')
-print('[l] --> ECOSIA\t\t')
-print('[m] --> GIGABLAST\t\t')
-print('[n] --> BAIDU\t\t')
-
-
-
-def test():
+def selection():
     while True:
-        option = input('\033[1;34mEnter option > ').lower()
-        if option =='a':
-            webbrowser.open_new_tab('http://www.google.com')
-        elif option == 'b':
-            webbrowser.open_new_tab('http://www.bing.com')
-        elif option == 'c':
-            webbrowser.open_new_tab('http://www.duckduckgo.com')
-        elif option == 'd':
-            webbrowser.open_new_tab('http://www.wiki.com')
-        elif option == 'e':
-            webbrowser.open_new_tab('https://ccsearch.creativecommons.org/')
-        elif option == 'f':
-            webbrowser.open_new_tab('https://gibiru.com/')
-        elif option == 'g':
-            webbrowser.open_new_tab('https://archive.org/') #internet Archive
-        elif option == 'h':
-            webbrowser.open_new_tab('https://www.searchencrypt.com/')
-        elif option == 'i':
-            webbrowser.open_new_tab('https://yandex.com/')
-        elif option == 'j':
-            webbrowser.open_new_tab('https://www.startpage.com/')
-        elif option == 'k':
-            webbrowser.open_new_tab('https://swisscows.ch/')
-        elif option == 'l':
-            webbrowser.open_new_tab('https://www.ecosia.org/?c=en')
-        elif option == 'm':
-            webbrowser.open_new_tab('https://www.gigablast.com/')
-        elif option == 'n':
-            webbrowser.open_new_tab('https://www.baidu.com/')
-        elif option == 'o':
+        try:
+            a = int(input('Enter Option >'))
+            if a == 1 or a == 2:
+                break
+            else:
+                print('Please Selection 1 or 2')
+        except ValueError:
+            print('Please Selection 1 or 2')
+    return a
+
+def surface_web_list():
+    print('\033[34m.' * 54)
+    print('[1] --> GOOGLE')
+    print('[2] --> BING')
+    print('[3] --> DUCKDUCKGO')
+    print('[4] --> WIKI')
+    print('[5] --> CC SEARCH')
+    print('[6] --> GIBIRU')
+    print('[7] --> ARCHIVE')
+    print('[8] --> SEARCH ENCRYPT')
+    print('[9] --> YANDEX\t\t')
+    print('[10] --> START PAGE\t\t')
+    print('[11] --> SWISS COWS\t\t')
+    print('[12] --> ECOSIA\t\t')
+    print('[13] --> GIGABLAST\t\t')
+    print('[14] --> BAIDU\t\t')
+
+
+def dark_web_list():
+    print('\033[34m.' * 54)
+    print('[1] --> TOR BROWSER')
+    print('[2] --> GETI2P')
+    print('[3] --> SUBGRAPH')
+    print('[4] --> MOZILLA')
+    print('[5] --> WATERFOX')
+    print('[6] --> TAIL BOUM')
+    print('[7] --> OPERA')
+    print('[8] --> WHONIX')
+
+
+def surface_web_options():
+    while True:
+        print('\033[35m.' * 54)
+        print('[1] --> GOOGLE')
+        print('[2] --> BING')
+        print('[3] --> DUCKDUCKGO')
+        print('[4] --> WIKI')
+        print('[5] --> CC SEARCH')
+        print('[6] --> GIBIRU')
+        print('[7] --> ARCHIVE')
+        print('[8] --> SEARCH ENCRYPT')
+        print('[9] --> YANDEX\t\t')
+        print('[10] --> START PAGE\t\t')
+        print('[11] --> SWISS COWS\t\t')
+        print('[12] --> ECOSIA\t\t')
+        print('[13] --> GIGABLAST\t\t')
+        print('[14] --> BAIDU\t\t')
+        try:
+            a = int(input('Enter Selection >'))
+            break
+        except ValueError:
+            print('Select from 1 to 14')
+    return a
+
+
+def dark_web_options():
+    while True:
+        print('\033[35m.' * 54)
+        print('[1] --> TOR BROWSER')
+        print('[2] --> GETI2P')
+        print('[3] --> SUBGRAPH')
+        print('[4] --> MOZILLA')
+        print('[5] --> WATERFOX')
+        print('[6] --> TAIL BOUM')
+        print('[7] --> OPERA')
+        print('[8] --> WHONIX')
+        try:
+            a = int(input('Enter Selection >'))
+            break
+        except ValueError:
+            print('Select from 1 to 8')
+    return a
+
+
+def opensurfacewebpage(option):
+    while True:
+            if option == 1:
+                webbrowser.open_new_tab('http://www.google.com')
+            elif option == 2:
+                webbrowser.open_new_tab('http://www.bing.com')
+            elif option == 3:
+                webbrowser.open_new_tab('http://www.duckduckgo.com')
+            elif option == 4:
+                webbrowser.open_new_tab('http://www.wiki.com')
+            elif option == 5:
+                webbrowser.open_new_tab('https://ccsearch.creativecommons.org/')
+            elif option == 6:
+                webbrowser.open_new_tab('https://gibiru.com/')
+            elif option == 7:
+                webbrowser.open_new_tab('https://archive.org/')  # internet Archive
+            elif option == 8:
+                webbrowser.open_new_tab('https://www.searchencrypt.com/')
+            elif option == 9:
+                webbrowser.open_new_tab('https://yandex.com/')
+            elif option == 10:
+                webbrowser.open_new_tab('https://www.startpage.com/')
+            elif option == 11:
+                webbrowser.open_new_tab('https://swisscows.ch/')
+            elif option == 12:
+                webbrowser.open_new_tab('https://www.ecosia.org/?c=en')
+            elif option == 13:
+                webbrowser.open_new_tab('https://www.gigablast.com/')
+            elif option == 14:
+                webbrowser.open_new_tab('https://www.baidu.com/')
+            else:
+                time.sleep(2)
+                print('\n\033[1;31mFORTIFY SOLUTIONS \033[0mThanks to all members for its Support and Contributions')
+                time.sleep(2)
+                break
+            surface_web_list()
+            try:
+                option = int(input('\033[1;36mEnter 1 to 14 to open a Search Engine or ENTER any key to QUIT'))
+            except ValueError:
+                time.sleep(2)
+                print('\n\033[1;31mFORTIFY SOLUTIONS \033[0mThanks to all members for its Support and Contributions')
+                time.sleep(2)
+                break
+
+
+def opendarkwebpage(option):
+    while True:
+        if option == 1:
             webbrowser.open_new_tab('https://www.torproject.org/download/')
-        elif option == 'p':
+        elif option == 2:
             webbrowser.open_new_tab('https://geti2p.net/en/')
-        elif option == 'q':
+        elif option == 3:
             webbrowser.open_new_tab('https://subgraph.com/sgos/')
-        elif option == 'r':
+        elif option == 4:
             webbrowser.open_new_tab('https://www.mozilla.org/en-US/firefox/new/')
-        elif option == 's':
+        elif option == 5:
             webbrowser.open_new_tab('https://www.waterfox.net/')
-        elif option == 't':
+        elif option == 6:
             webbrowser.open_new_tab('https://tails.boum.org/')
-        elif option == 'u':
+        elif option == 7:
             webbrowser.open_new_tab('https://www.opera.com/hi')
-        elif option == 'v':
+        elif option == 8:
             webbrowser.open_new_tab('https://www.whonix.org/')
-        again = input('\033[1;36mEnter [1] to QUIT or ENTER any key to CONTINUE.....')
-        time.sleep(1)
-        if again == '1':
-            print('\nFORTIFY SOLUTIONS Thanks to all members for its Support and Contributions')
+        else:
+            time.sleep(2)
+            print('\n\033[1;31mFORTIFY SOLUTIONS \033[0mThanks to all members for its Support and Contributions')
+            time.sleep(2)
+            break
+        dark_web_list()
+        try:
+            option = int(input('\033[1;36mEnter 1 to 8 to open a Search Engine or ENTER any key to QUIT'))
+        except ValueError:
+            time.sleep(2)
+            print('\n\033[1;31mFORTIFY SOLUTIONS \033[0mThanks to all members for its Support and Contributions')
             time.sleep(2)
             break
 
-test()
+
+
+def main():
+    print('\n')
+    print('<>'*20)
+    print('`'*40)
+    print('\033[1;31mFORTIFY \033[0mSOLUTIONS')
+    print('\033[1;32mVersion:1.0\tRelease Date:28-10-2019')
+    print(time.asctime())
+    print('\n\033[1;31m【W】【e】【b】【P】【a】【g】【e】\033[0m\n')
+    print('-'*40)
+    print('\033[34mSELECT\t\tOPTIONS\033[0m')
+    print('.'*40)
+    print('\033[1;31m [1] >>>  SURFACE WEB SEARCH ENGINE\n [2] >>>  DARK WEB SEARCH ENGINE\033[0m\033[32m\n')
+    search_engine_selection = selection()
+    if search_engine_selection == 1:
+        openwebpage = surface_web_options()
+        opensurfacewebpage(openwebpage)
+    elif search_engine_selection == 2:
+        openwebpage = dark_web_options()
+        opendarkwebpage(openwebpage)
+
+main()
